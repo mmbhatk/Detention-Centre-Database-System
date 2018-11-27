@@ -297,7 +297,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#F4A330;}
 
 
 /* Page Intro */
-#pageintro li{color:#FFFFFF;}
+#pageintro li{color:#ff8c00;}
 
 
 /* Content Area */
@@ -307,7 +307,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#F4A330;}
 
 .team > figure > a{color:inherit;}
 .team > figure > a:hover::before{background:rgba(0,0,0,.2); border-color:#F4A330;}
-.team > figure > a:hover::after{color:#FFFFFF;}
+.team > figure > a:hover::after{color:rgb(255, 255, 255);}
 
 
 /* Footer */
