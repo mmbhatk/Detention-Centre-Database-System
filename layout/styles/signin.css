@@ -69,8 +69,15 @@ body {
   content: "\f007";
 }
 .login-form-container .input-wrapper:nth-child(2):before {
+  content: "\f007";
+}
+.login-form-container .input-wrapper:nth-child(3):before {
+  content: "\f007";
+}
+.login-form-container .input-wrapper:nth-child(4):before {
   content: "\f023";
 }
+
 .login-form-container button {
   outline: 0;
   font-size: 8px;
