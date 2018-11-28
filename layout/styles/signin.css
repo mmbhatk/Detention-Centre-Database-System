@@ -72,7 +72,7 @@ body {
   content: "\f007";
 }
 .login-form-container .input-wrapper:nth-child(3):before {
-  content: "\f007";
+  content: "\f0e0";
 }
 .login-form-container .input-wrapper:nth-child(4):before {
   content: "\f023";
