@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="layout/styles/register.css" rel="stylesheet" type="text/css" media="all">
+    <title>Register</title>
+</head>
+<body>
+    <div id="login" class="login-form-container register">
+        <header>Add Prisoner</header>
+        <fieldset>
+          <div class="input-wrapper">
+            <input type="text" placeholder="First name" id="fname" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Last name" id="lname" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Address" id="addr" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Warden ID" id="WID" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Gender" id="gender" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Date of in" id="date_of_in" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Date of out" id="date_of_out" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Category" id="category" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="PID" id="PID" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="password" placeholder="SID" id="SID" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="password" placeholder="Case ID" id="case_id" required/>
+          </div>
+          <div class="input-wrapper">
+            <input type="password" placeholder="Cell ID" id="cell_id" required/>
+          </div>
+
+          <button id="continue" type="button" onclick="register();">Add</button>
+        </fieldset>
+      </div>
+    <script src="layout/scripts/prisoner.js"></script>
+</body>
+</html>

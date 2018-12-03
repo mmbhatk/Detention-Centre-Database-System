@@ -24,7 +24,10 @@ body {
     cursor:pointer;
     overflow: hidden;
     outline:none;
+    vertical-align: bottom;
 }
+a { color: inherit; 
+    text-decoration: none;} 
 
 .left {
     left: 0;
@@ -47,6 +50,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    display: table;
 }
 
 .centered img {
@@ -59,20 +63,20 @@ body {
 
 <div class="split left">
   <div class="centered">
-    <button class="button" id="database"><img src="./images/demo/database.jpg" alt="Avatar woman"></button>
-    <h2>Browse Database</h2>
+    <button class="button" id="database"><a href="db.html"><img src="./images/demo/database.jpg" alt="Avatar woman"></button>
+    <h2>Browse Database</h2></a>
   </div>
 </div>
 <div class="split center">
     <div class="centered">
-      <button class="button" id="prisoner"><img src="./images/demo/handcuff.png" alt="Avatar woman"></button>
-      <h2>Add prisoner</h2>
+      <button class="button" id="prisoner"><a href="prisoner.html"><img src="./images/demo/handcuff.png" alt="Handcuff"></button>
+      <h2>Add Prisoner</h2></a>
     </div>
   </div>
 <div class="split right">
   <div class="centered">
-    <button class="button" id="warden"><img src="./images/demo/warden.png" alt="Avatar man"></button>
-    <h2 style="color: black;">Add warden</h2>
+    <button class="button" id="warden"><a href="warden.html"><img src="./images/demo/warden.png" alt="Avatar man"></button>
+    <h2 style="color: black;">Add Warden</h2></a>
   </div>
 </div>
      
