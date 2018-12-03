@@ -12,10 +12,10 @@
         <header>REGISTER</header>
         <fieldset>
           <div class="input-wrapper">
-            <input type="text" placeholder="First name" id="fname" required/>
+            <input type="text" placeholder="First name" id="fname" pattern="[a-z]" required/>
           </div>
           <div class="input-wrapper">
-            <input type="text" placeholder="Last name" id="lname" required/>
+            <input type="text" placeholder="Last name" id="lname" pattern="[a-z]" required/>
           </div>
           <div class="input-wrapper">
             <input type="text" placeholder="Officer ID" id="OID" required/>
@@ -27,7 +27,7 @@
             <input type="text" placeholder="Status" id="status" required/>
           </div>
           <div class="input-wrapper">
-            <input type="text" placeholder="Phone number" id="phone" required/>
+            <input type="text" placeholder="Phone number" id="phone" pattern="[0-9]{10}" required/>
           </div>
           <div class="input-wrapper">
             <input type="text" placeholder="Salary" id="salary" required/>

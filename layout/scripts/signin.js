@@ -36,7 +36,7 @@ function login() {
       data: s
 
   }).done(function(data) {
-      if (data.login == 'true') window.location = db+'officer.html';
+      if (data.login == 'true') window.location = 'http://127.0.0.1:5500/officer.html';
       else alert('login credentials invalid');
 });
 }
