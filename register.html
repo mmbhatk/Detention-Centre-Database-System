@@ -4,43 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="layout/styles/signin.css" rel="stylesheet" type="text/css" media="all">
+    <link href="layout/styles/register.css" rel="stylesheet" type="text/css" media="all">
     <title>Register</title>
 </head>
 <body>
-    <div id="login" class="login-form-container">
+    <div id="login" class="login-form-container register">
         <header>REGISTER</header>
         <fieldset>
           <div class="input-wrapper">
-            <input type="text" placeholder="First name" />
+            <input type="text" placeholder="First name" id="fname" required/>
           </div>
           <div class="input-wrapper">
-            <input type="text" placeholder="Last name" />
+            <input type="text" placeholder="Last name" id="lname" required/>
           </div>
           <div class="input-wrapper">
-            <input type="text" placeholder="Officer ID" />
+            <input type="text" placeholder="Officer ID" id="OID" required/>
           </div>
           <div class="input-wrapper">
-            <input type="text" placeholder="Title" />
+            <input type="text" placeholder="Title" id="title" required/>
           </div>
           <div class="input-wrapper">
-            <input type="text" placeholder="Status" />
+            <input type="text" placeholder="Status" id="status" required/>
           </div>
           <div class="input-wrapper">
-            <input type="text" placeholder="Phone number" />
+            <input type="text" placeholder="Phone number" id="phone" required/>
           </div>
           <div class="input-wrapper">
-            <input type="text" placeholder="Salary" />
+            <input type="text" placeholder="Salary" id="salary" required/>
           </div>
           <div class="input-wrapper">
-            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Username" id="uname" required/>
           </div>
           <div class="input-wrapper">
-            <input type="password" placeholder="password" />
+            <input type="password" placeholder="password" id="password" required/>
           </div>
-          <button id="continue" type="button" onclick="location.href = './signin.html';">CONTINUE</button>
+          <button id="continue" type="button" onclick="register();">CONTINUE</button>
         </fieldset>
       </div>
-    <script src="layout/scripts/register.jss"></script>
+    <script src="layout/scripts/register.js"></script>
 </body>
 </html>
