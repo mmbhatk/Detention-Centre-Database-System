@@ -41,7 +41,7 @@ File: Layout CSS
 #pageintro{padding:200px 0;}
 
 #pageintro li{}
-#pageintro li article{display:block; max-width:55%;}
+#pageintro li article{display:block; max-width:55%; background-color: rgba(0,0,0,0.5)}
 #pageintro li article *{word-wrap:break-word;}
 #pageintro li .heading{margin-bottom:20px; font-size:3rem; font-weight:700;}
 #pageintro li p{font-size:1.2rem;}

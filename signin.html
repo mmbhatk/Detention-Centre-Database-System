@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="jquery-3.3.1.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,12 +13,12 @@
         <header>LOGIN</header>
         <fieldset>
           <div class="input-wrapper">
-            <input type="text" placeholder="your@email.com" />
+            <input type="text" placeholder="username" name="uname"/>
           </div>
           <div class="input-wrapper">
-            <input type="password" placeholder="password" />
+            <input type="password" placeholder="password" name="password"/>
           </div>
-          <button id="continue" type="button">CONTINUE</button>
+          <button id="continue" type="button" onclick="login(uname,password);">Login</button>
         </fieldset>
       </div>
     <script src="layout/scripts/signin.jss"></script>
