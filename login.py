@@ -102,9 +102,9 @@ def add_warden():
             return 200
 
 @app.route('/browse_officer/<int:oid>')
-def browse_officer():
+def browse_officer(oid):
     #VARSHA
-    con = sqlite3.connect('example.db')
+    con = sqlite3.connect('FrostgateDetentionCenter.db')
     c = con.cursor()
     query = 'SELECT * FROM Warden WHERE Warden.WID=%d' % oid
     c.execute(query)
@@ -115,38 +115,9 @@ def browse_officer():
 @app.route('/browse_warden/<int:wid>')
 def browse_warden(wid):
     #VARSHA
-    con = sqlite3.connect('example.db')
+    con = sqlite3.connect('FrostgateDetentionCenter.db')
     c = con.cursor()
 
-    #---------------------
-    sql_command = """CREATE TABLE Prisoner (  
-    PID INTEGER,
-    WID INTEGER,
-    fname VARCHAR);"""
-    #c.execute(sql_command)
-
-    sql_command = """CREATE TABLE Warden (  
-    WID INTEGER,
-    fname VARCHAR);"""
-    #c.execute(sql_command)
-
-    sql_command = """INSERT INTO Prisoner VALUES (1, 111, "Owlu");"""
-    c.execute(sql_command)
-
-    sql_command = """INSERT INTO Prisoner VALUES (2, 111, "Lohu");"""
-    c.execute(sql_command) 
-
-    sql_command = """INSERT INTO Prisoner VALUES (3, 112, "Pratikshu");"""
-    c.execute(sql_command) 
-
-    sql_command = """INSERT INTO Warden VALUES (111, "Manu");"""
-    c.execute(sql_command) 
-
-    sql_command = """INSERT INTO Warden VALUES (112, "Varsha");"""
-    c.execute(sql_command) 
-    #---------------------
-
-    #query = 'SELECT * from Prisoner'
     query = 'SELECT * FROM Prisoner WHERE Prisoner.WID=%d' % wid
     c.execute(query)
     ans = c.fetchall()
