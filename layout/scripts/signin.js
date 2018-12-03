@@ -26,7 +26,7 @@ PrefixedEvent(vLogin, "AnimationEnd", function () {
 function login() {
   s = new FormData();
   s.append('username', uname.value);
-  s.append('password', password.value)
+  s.append('password', password.value);
   var g = $.ajax({
       url: db + 'login', 
       type: 'POST',
