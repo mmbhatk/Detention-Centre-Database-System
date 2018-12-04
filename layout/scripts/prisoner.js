@@ -30,7 +30,7 @@ function register() {
 
     
     var g = $.ajax({
-        url: db + 'login', 
+        url: db + 'add_prisoner', 
         type: 'POST',
         processData : false,
         contentType : false, 
