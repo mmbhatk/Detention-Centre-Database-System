@@ -1,7 +1,6 @@
 fname = document.getElementById('fname');
 lname = document.getElementById('lname');
 addr = document.getElementById('addr');
-WID = document.getElementById('WID');
 gender = document.getElementById('gender');
 date_of_in = document.getElementById('date_of_in');
 date_of_out = document.getElementById('date_of_out');
@@ -19,7 +18,6 @@ function register() {
     s.append('fname', fname.value); 
     s.append('lanme', lname.value);
     s.append('addr', addr.value);
-    s.append('WID', WID.value);
     s.append('gender', gender.value);
     s.append('date_of_in', date_of_in.value);
     s.append('date_of_out', date_of_out.value);
