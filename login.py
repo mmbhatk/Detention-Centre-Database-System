@@ -91,7 +91,7 @@ def add_warden():
             OID = request.form['OID']
             salary = request.form['salary']
             #VARSHA
-            with sqlite3.connect("database.db") as con:
+            with sqlite3.connect("FrostgateDetentionCenter.db") as con:
                 cur = con.cursor()
                 #VARSHA
                 cur.execute("INSERT INTO Warden VALUES (?,?,?,?)",(name,WID,salary,OID))
@@ -101,24 +101,24 @@ def add_warden():
         finally:
             return 200
 
-@app.route('/browse_officer/<int:oid>')
+@app.route('/browse_officer/<oid>')
 def browse_officer(oid):
-    #VARSHA
     con = sqlite3.connect('FrostgateDetentionCenter.db')
     c = con.cursor()
-    query = 'SELECT * FROM Warden WHERE Warden.WID=%d' % oid
+    query = 'SELECT * FROM Warden WHERE Warden.OID=%s' % oid
     c.execute(query)
     ans = c.fetchall()
     con.close()
     return jsonify(ans)
 
-@app.route('/browse_warden/<int:wid>')
+@app.route('/browse_warden/<wid>')
 def browse_warden(wid):
-    #VARSHA
     con = sqlite3.connect('FrostgateDetentionCenter.db')
     c = con.cursor()
-
-    query = 'SELECT * FROM Prisoner WHERE Prisoner.WID=%d' % wid
+#    query = 'SELECT * FROM Prisoner, Section WHERE Prisoner.SID=Section.SID AND WID=%s' % wid
+    s = 'A_SECTION_'
+    query = 'SELECT * FROM Prisoner NATURAL JOIN Section where Section.wid=%s'%wid
+    #query = 'SELECT * FROM Prisoner, Section'# WHERE Prisoner.sid=Section.sid '
     c.execute(query)
     ans = c.fetchall()
     con.close()
