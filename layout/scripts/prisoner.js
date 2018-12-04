@@ -11,11 +11,12 @@ SID = document.getElementById('SID');
 case_id = document.getElementById('case_id');
 cell_id = document.getElementById('cell_id');
 
+db = 'http://127.0.0.1:5000/'
 
 //login functionality
 function register() {
     s = new FormData();
-    s.append('fname', fname.value); m 
+    s.append('fname', fname.value); 
     s.append('lanme', lname.value);
     s.append('addr', addr.value);
     s.append('WID', WID.value);

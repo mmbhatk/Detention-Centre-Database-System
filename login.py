@@ -47,7 +47,7 @@ def register():
             with sqlite3.connect("database.db") as con:
                 cur = con.cursor()
                 #VARSHA
-                cur.execute("INSERT INTO Officer VALUES (?,?,?,?,?,?,?,?,?)",(fname,lname,OID,title,status,phone,salary,uname,password))
+                cur.execute("INSERT INTO Officer VALUES (?,?,?,?,?,?,?,?)",(fname,lname,OID,title,phone,salary,uname,password))
                 con.commit()
         except:
             con.rollback()      
@@ -58,6 +58,7 @@ def register():
 @app.route('/add_prisoner', methods = ['POST'])
 def add_prisoner():
     if request.method == 'POST':
+        print(request.form)
         try:
             fname = request.form['fname']
             lname = request.form['lname']
@@ -72,9 +73,8 @@ def add_prisoner():
             cell_id = request.form['cell_id']
             salary = request.form['salary']
             #VARSHA
-            with sqlite3.connect("database.db") as con:
+            with sqlite3.connect("FrostgateDetentionCenter.db") as con:
                 cur = con.cursor()
-                #VARSHA
                 cur.execute("INSERT INTO Officer VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",(PID,fname,lname,addr,category,date_of_in,date_of_out,gender,salary,cell_id,SID,case_id))
                 con.commit()
         except:

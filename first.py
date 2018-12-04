@@ -160,7 +160,7 @@ crsr.execute(com)
 com = """CREATE TABLE PRISONER (    
 PID VARCHAR(10) PRIMARY KEY,
 fname VARCHAR(20),
-lname VARCHAR(30),  
+lname VARCHAR(30),
 addr VARCHAR(30),
 category VARCHAR(20),
 date_of_in DATE,
