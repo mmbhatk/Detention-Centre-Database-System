@@ -8,6 +8,62 @@
     <link href="layout/styles/signin.css" rel="stylesheet" type="text/css" media="all">
     <title>Sign In</title>
 </head>
+<style>
+body {
+    font-family: Arial;
+    color: white;
+}
+
+.split {
+    height: 100%;
+    width: 33%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    vertical-align: bottom;
+}
+a { color: inherit; 
+    text-decoration: none;} 
+
+.left {
+    left: 0;
+    background-color: #272e38;
+}
+
+.center {
+    left: 33%;
+    background-color: rgb(27, 63, 163);
+}
+
+.right {
+    right: 0;
+    background-color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: table;
+}
+
+.centered img {
+    width: 150px;
+    border-radius: 20%;
+}
+</style>
 <body>
     <div id="login" class="login-form-container">
         <header>LOGIN</header>

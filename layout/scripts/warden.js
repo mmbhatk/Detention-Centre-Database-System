@@ -13,7 +13,7 @@ function register() {
     s.append('salary', salary.value);
     
     var g = $.ajax({
-        url: db + 'login', 
+        url: db + 'add_warden', 
         type: 'POST',
         processData : false,
         contentType : false, 
