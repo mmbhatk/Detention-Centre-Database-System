@@ -1,7 +1,6 @@
 fname = document.getElementById('fname');
 lname = document.getElementById('lname');
 addr = document.getElementById('addr');
-WID = document.getElementById('WID');
 gender = document.getElementById('gender');
 date_of_in = document.getElementById('date_of_in');
 date_of_out = document.getElementById('date_of_out');
@@ -11,14 +10,13 @@ SID = document.getElementById('SID');
 case_id = document.getElementById('case_id');
 cell_id = document.getElementById('cell_id');
 
-
+print(OID)
 //login functionality
 function register() {
     s = new FormData();
     s.append('fname', fname.value); m 
     s.append('lanme', lname.value);
     s.append('addr', addr.value);
-    s.append('WID', WID.value);
     s.append('gender', gender.value);
     s.append('date_of_in', date_of_in.value);
     s.append('date_of_out', date_of_out.value);
