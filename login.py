@@ -59,28 +59,29 @@ def register():
 def add_prisoner():
     if request.method == 'POST':
         print(request.form)
-        try:
-            fname = request.form['fname']
-            lname = request.form['lname']
-            addr = request.form['addr']
-            gender = request.form['gender']
-            date_of_in = request.form['date_of_in']
-            date_of_out = request.form['date_of_out']
-            category = request.form['category']
-            PID = request.form['PID']
-            SID = request.form['SID']
-            case_id = request.form['case_id']
-            cell_id = request.form['cell_id']
-            salary = request.form['salary']
-            #VARSHA
-            with sqlite3.connect("FrostgateDetentionCenter.db") as con:
-                cur = con.cursor()
-                cur.execute("INSERT INTO Officer VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",(PID,fname,lname,addr,category,date_of_in,date_of_out,gender,salary,cell_id,SID,case_id))
-                con.commit()
-        except:
-            con.rollback()      
-        finally:
-            return 200
+        
+        fname = request.form['fname']
+        lname = request.form['lname']
+        addr = request.form['addr']
+        gender = request.form['gender']
+        date_of_in = request.form['date_of_in']
+        date_of_out = request.form['date_of_out']
+        category = request.form['category']
+        PID = request.form['PID']
+        SID = request.form['SID']
+        case_id = request.form['case_id']
+        cell_id = request.form['cell_id']
+        salary = request.form['salary']
+        #VARSHA
+        with sqlite3.connect("FrostgateDetentionCenter.db") as con:
+            cur = con.cursor()
+            cur.execute("INSERT INTO PRISONER VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",(PID,fname,lname,addr,category,date_of_in,date_of_out,gender,salary,cell_id,SID,case_id))
+            con.commit()
+            print('successfully added')
+        # except:
+        #     con.rollback()      
+        # finally:
+        return '200'
 
 @app.route('/add_warden', methods = ['POST'])
 def add_warden():
@@ -99,7 +100,7 @@ def add_warden():
         except:
             con.rollback()      
         finally:
-            return 200
+            return '200'
 
 @app.route('/browse_officer/<oid>')
 def browse_officer(oid):

@@ -16,7 +16,7 @@ db = 'http://127.0.0.1:5000/'
 function register() {
     s = new FormData();
     s.append('fname', fname.value); 
-    s.append('lanme', lname.value);
+    s.append('lname', lname.value);
     s.append('addr', addr.value);
     s.append('gender', gender.value);
     s.append('date_of_in', date_of_in.value);

@@ -1,4 +1,4 @@
-db = "http://127.0.0.1:5000/"
+var db = "http://127.0.0.1:5000/"
 uname = document.getElementById('uname');
 password = document.getElementById('password');
 var OID;
@@ -63,7 +63,9 @@ function login() {
   }).done(function(data) {
       if (data.login == 'true') {
         OID = data.OID;
+        console.log(OID);
         render_options();
+        
       }
       else alert('login credentials invalid');
 });
