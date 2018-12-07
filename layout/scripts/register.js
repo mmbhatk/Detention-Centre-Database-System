@@ -13,7 +13,7 @@ db = 'http://127.0.0.1:5000/'
 function register() {
     s = new FormData();
     s.append('fname', fname.value);
-    s.append('lanme', lname.value);
+    s.append('lname', lname.value);
     s.append('OID', OID.value);
     s.append('title', title.value);
     s.append('phone', phone.value);
@@ -30,7 +30,7 @@ function register() {
         data: s
   
     }).done(function(data) {
-        window.location = db+'login.html';
+        // window.location = db+'login.html';
   });
   }
   function test () {

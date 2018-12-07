@@ -34,26 +34,27 @@ def login():
 @app.route('/register', methods = ['POST'])
 def register():
     if request.method == 'POST':
-        try:
-            print(request.form)
-            fname = request.form['fname']
-            lname = request.form['lname']
-            OID = request.form['OID']
-            title = request.form['title']
-            phone = request.form['phone']
-            salary = request.form['salary']
-            uname = request.form['uname']
-            password = request.form['password']
+        # try:
+        fname = request.form['fname']
+        lname = request.form['lname']
+        OID = request.form['OID']
+        title = request.form['title']
+        phone = request.form['phone']
+        salary = request.form['salary']
+        uname = request.form['uname']
+        password = request.form['password']
+        #VARSHA
+        with sqlite3.connect("FrostgateDetentionCenter.db") as con:
+            cur = con.cursor()
             #VARSHA
-            with sqlite3.connect("database.db") as con:
-                cur = con.cursor()
-                #VARSHA
-                cur.execute("INSERT INTO Officer VALUES (?,?,?,?,?,?,?,?)",(fname,lname,OID,title,phone,salary,uname,password))
-                con.commit()
-        except:
-            con.rollback()      
-        finally:
-            return '200'
+            cur.execute("INSERT INTO Officer VALUES (?,?,?,?,?,?,?,?)",(fname,lname,OID,title,phone,salary,uname,password))
+            print(fname,lname,OID,title,phone,salary,uname,password)
+            con.commit()
+        # except Exception as e:
+        #     print(e)
+        #     con.rollback()
+        # finally:
+        return '200'
 
 #VARSHAAAAA
 @app.route('/add_prisoner', methods = ['POST'])
