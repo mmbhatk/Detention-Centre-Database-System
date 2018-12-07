@@ -1,13 +1,14 @@
-name = document.getElementById('name');
+Name = document.getElementById('Name');
 WID = document.getElementById('WID');
 OID = document.getElementById('OID');
 salary = document.getElementById('salary');
 
+db = 'http://127.0.0.1:5000/'
 
 //login functionality
 function register() {
     s = new FormData();
-    s.append('name', name.value);
+    s.append('name', Name.value);
     s.append('WID', WID.value);
     s.append('OID', OID.value);
     s.append('salary', salary.value);
