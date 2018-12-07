@@ -88,22 +88,21 @@ def add_prisoner():
 @app.route('/add_warden', methods = ['POST'])
 def add_warden():
     if request.method == 'POST':
-        try:
-            print(request.form)
-            name = request.form['name']
-            WID = request.form['WID']
-            OID = request.form['OID']
-            salary = request.form['salary']
+        # try:
+        name = request.form['name']
+        WID = request.form['WID']
+        OID = request.form['OID']
+        salary = request.form['salary']
+        #VARSHA
+        with sqlite3.connect("FrostgateDetentionCenter.db") as con:
+            cur = con.cursor()
             #VARSHA
-            with sqlite3.connect("FrostgateDetentionCenter.db") as con:
-                cur = con.cursor()
-                #VARSHA
-                cur.execute("INSERT INTO Warden VALUES (?,?,?,?)",(name,WID,salary,OID))
-                con.commit()
-        except:
-            con.rollback()      
-        finally:
-            return '200'
+            cur.execute("INSERT INTO Warden VALUES (?,?,?,?)",(name,WID,salary,OID))
+            con.commit()
+        # except:
+        #     con.rollback()      
+        # finally:
+        return '200'
 
 @app.route('/browse_officer/<oid>')
 def browse_officer(oid):

@@ -7,6 +7,10 @@ body {
   font-size: 0.6em;
 }
 
+input[type=text] {
+  color: white;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
