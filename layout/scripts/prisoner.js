@@ -9,6 +9,7 @@ PID = document.getElementById('PID');
 SID = document.getElementById('SID');
 case_id = document.getElementById('case_id');
 cell_id = document.getElementById('cell_id');
+salary = document.getElementById('salary')
 
 db = 'http://127.0.0.1:5000/'
 
@@ -18,6 +19,7 @@ function register() {
     s.append('fname', fname.value); 
     s.append('lname', lname.value);
     s.append('addr', addr.value);
+    s.append('salary', salary.value);
     s.append('gender', gender.value);
     s.append('date_of_in', date_of_in.value);
     s.append('date_of_out', date_of_out.value);
@@ -44,4 +46,3 @@ function register() {
   function test () {
     console.log(uname.value, password.value)
   }
-  

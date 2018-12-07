@@ -15,7 +15,7 @@ function register() {
     s.append('lanme', lname.value);
     s.append('OID', OID.value);
     s.append('title', title.value);
-    s.append('ststus', status.value);
+    s.append('status', status.value);
     s.append('phone', phone.value);
     s.append('salary', salary.value);
     s.append('uname', uname.value);
