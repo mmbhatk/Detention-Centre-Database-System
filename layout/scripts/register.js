@@ -12,7 +12,7 @@ password = document.getElementById('password');
 function register() {
     s = new FormData();
     s.append('fname', fname.value);
-    s.append('lanme', lname.value);
+    s.append('lname', lname.value);
     s.append('OID', OID.value);
     s.append('title', title.value);
     s.append('status', status.value);

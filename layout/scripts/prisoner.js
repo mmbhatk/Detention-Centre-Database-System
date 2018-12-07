@@ -9,7 +9,7 @@ PID = document.getElementById('PID');
 SID = document.getElementById('SID');
 case_id = document.getElementById('case_id');
 cell_id = document.getElementById('cell_id');
-salary = document.getElementById('salary')
+salary = document.getElementById('salary');
 
 db = 'http://127.0.0.1:5000/'
 
