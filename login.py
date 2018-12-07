@@ -35,6 +35,7 @@ def login():
 def register():
     if request.method == 'POST':
         try:
+            print(request.form)
             fname = request.form['fname']
             lname = request.form['lname']
             OID = request.form['OID']
@@ -52,7 +53,7 @@ def register():
         except:
             con.rollback()      
         finally:
-            return 200
+            return '200'
 
 #VARSHAAAAA
 @app.route('/add_prisoner', methods = ['POST'])
@@ -87,6 +88,7 @@ def add_prisoner():
 def add_warden():
     if request.method == 'POST':
         try:
+            print(request.form)
             name = request.form['name']
             WID = request.form['WID']
             OID = request.form['OID']

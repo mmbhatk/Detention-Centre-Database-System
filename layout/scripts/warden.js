@@ -3,6 +3,7 @@ WID = document.getElementById('WID');
 OID = document.getElementById('OID');
 salary = document.getElementById('salary');
 
+db = 'http://127.0.0.1:5000/'
 
 //login functionality
 function register() {
