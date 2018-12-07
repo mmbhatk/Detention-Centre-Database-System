@@ -104,7 +104,7 @@ def add_warden():
         # finally:
         return '200'
 
-@app.route('/browse_officer/<oid>')
+@app.route('/browse_officer/<oid>', methods=['GET'])
 def browse_officer(oid):
     con = sqlite3.connect('FrostgateDetentionCenter.db')
     c = con.cursor()
