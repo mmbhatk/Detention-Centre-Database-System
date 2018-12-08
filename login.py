@@ -98,6 +98,7 @@ def add_warden():
             cur = con.cursor()
             #VARSHA
             cur.execute("INSERT INTO Warden VALUES (?,?,?,?)",(name,WID,salary,OID))
+            print(request.form)
             con.commit()
         # except:
         #     con.rollback()      
