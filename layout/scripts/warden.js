@@ -22,7 +22,7 @@ function register() {
         data: s
   
     }).done(function(data) {
-        // window.location = db+'login.html';
+        window.location = 'choose.html';
   });
   }
   function test () {

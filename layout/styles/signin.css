@@ -10,7 +10,9 @@ body {
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
+input[type=text] {
+  color: white;
+}
 
 
 .login-form-container {

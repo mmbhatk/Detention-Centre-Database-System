@@ -1,7 +1,6 @@
 var db = "http://127.0.0.1:5000/"
 uname = document.getElementById('uname');
 password = document.getElementById('password');
-var OID;
 
 var vContinue = document.getElementById("continue"),
     vLogin = document.getElementById("login");
@@ -62,9 +61,12 @@ function login() {
 
   }).done(function(data) {
       if (data.login == 'true') {
-        OID = data.OID;
-        console.log(OID);
-        render_options();
+        Officer = data.OID;
+        localStorage.setItem('OID',data.OID);
+        console.log(localStorage.OID);
+        // render_options();
+        window.location = 'choose.html';
+
         
       }
       else alert('login credentials invalid');

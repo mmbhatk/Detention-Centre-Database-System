@@ -40,7 +40,7 @@ function register() {
   
     }).done(function(data) {
         alert('Added Successfully');
-        window.location = db+'prisoner.html';
+        window.location = 'choose.html';
   });
   }
   function test () {

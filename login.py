@@ -17,13 +17,13 @@ def login():
     result = request.form
     con = sqlite3.connect('FrostgateDetentionCenter.db', check_same_thread=False)
     crsr = con.cursor()
-    query = """SELECT uname, password FROM Officer"""
+    query = """SELECT uname, password, OID FROM Officer"""
     crsr.execute(query)
     ans = crsr.fetchall()
-    for un, pw in ans:
+    for un, pw, oid in ans:
         if un==result['username']:
             if pw==result['password']:
-                return jsonify({'login': 'true'})
+                return jsonify({'login': 'true', 'OID': oid})
             return jsonify({'login': 'false'})
     return jsonify({'login': 'false'})
     #return jsonify({'rows': ans})
@@ -109,7 +109,7 @@ def add_warden():
 def browse_officer(oid):
     con = sqlite3.connect('FrostgateDetentionCenter.db')
     c = con.cursor()
-    query = 'SELECT * FROM Warden WHERE Warden.OID=2222233333'
+    query = 'SELECT * FROM Warden WHERE Warden.OID='+oid
     c.execute(query)
     ans = c.fetchall()
     con.close()
