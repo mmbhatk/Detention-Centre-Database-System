@@ -5,9 +5,19 @@ db = 'http://127.0.0.1:5000/'
 var warden;
 keys = ['Name', 'Warden ID', 'Salary', 'Officer ID']
 
-function toggle(elem) {
-elem.style.border = "4px solid white;";
+function clearall() {
+    w = document.getElementsByClassName("warden");
+    for (var i = 0; i < w.length; i++) {
+    w[i].classList.remove('selected');
+        
+      }
 }
+
+function setSelected(elem){
+    console.log(elem);
+    elem.classList.add('selected');
+}
+
 
 var g = $.ajax({
     url: db + 'browse_officer/'+localStorage.OID, 
@@ -22,7 +32,7 @@ var g = $.ajax({
     wlist = ``;
     warden.forEach(function (entry) {
         entry[2] = '$'+entry[2];
-        wlist+=`<br><div onclick="prisoners(${entry[1]});toggle(this);" class="warden">`;
+        wlist+=`<br><div onclick="prisoners(${entry[1]},this);" class="warden">`;
         for (var i = 0; i < entry.length; i++) {
             wlist+=`<span>${keys[i]}: ${entry[i]}</span><br>`;
           }
@@ -33,7 +43,9 @@ var g = $.ajax({
     wardens.innerHTML = wlist;
 });
 
-function prisoners(WID) {
+function prisoners(WID, elem) {
+    clearall();
+    setSelected(elem);
     console.log(WID);
     var p = $.ajax({
         url: db + 'browse_warden/'+WID, 
