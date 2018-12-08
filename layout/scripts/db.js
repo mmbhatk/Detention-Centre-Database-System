@@ -69,7 +69,9 @@ function prisoners(WID, elem) {
             <span>Salary: $${e[8]}</span><br>
             <span>Cell ID: ${e[9]}</span><br>
             <span>Section: ${e[10]}</span><br>
-            <span>Case ID: ${e[11]}</span>
+            <span>Case ID: ${e[11]}</span><br>
+            <span>Time Table:</span>
+            <img src="images/demo/${e[10]}.png" width="98%" style="margin: 1%">
         </div>
         <br>`;
           });
