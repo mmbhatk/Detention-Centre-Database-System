@@ -10,7 +10,5 @@ var g = $.ajax({
 
 }).done(function(data) {
     warden = data;
-    wardens.innerHTML = `<ol>
-    <li>Name: `+``;
-    // alert('Added Successfully');
+    wardens.innerHTML = data;
 });

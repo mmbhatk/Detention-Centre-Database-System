@@ -108,10 +108,11 @@ def add_warden():
 def browse_officer(oid):
     con = sqlite3.connect('FrostgateDetentionCenter.db')
     c = con.cursor()
-    query = 'SELECT * FROM Warden WHERE Warden.OID=%s' % oid
+    query = 'SELECT * FROM Warden WHERE Warden.OID=2222233333'
     c.execute(query)
     ans = c.fetchall()
     con.close()
+    print(jsonify(ans))
     return jsonify(ans)
 
 @app.route('/browse_warden/<wid>')
